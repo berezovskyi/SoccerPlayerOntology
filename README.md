@@ -7,9 +7,10 @@ The ontology is used in the OBIEMachineLearningFramework for information extract
 The java binaries were generated with the OWL2JavaBinary-Tool.  
 
 
-This ontology describes a SoccerPlayer with 4 properties. Classes and proeprties are derived from the dbpedia-ontology / dbpedia infobox data and wikipedia pagelink data. 
+This ontology describes a SoccerPlayer with 4 properties. Classes and properties are derived from the dbpedia-ontology / dbpedia-infobox data and wikipedia-pagelink data. 
+
 ####
-NOTE: the namespace is actually not existance and just serves as an example!
+NOTE: The namespace is actually not existent and just serves as an example!
 ####
 
 The main class of this ontology is SoccerPlayer. 
