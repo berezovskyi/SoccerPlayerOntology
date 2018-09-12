@@ -1,0 +1,2356 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xml:base="http://psink.de/dbpedia/">
+   <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+ 
+
+  <owl:Class rdf:about="http://psink.de/dbpedia/Place"/>
+
+  <owl:Class rdf:about="http://psink.de/dbpedia/BirthPlace">
+     <rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/Place" />
+  </owl:Class>
+
+  <owl:Class rdf:about="http://psink.de/dbpedia/Team"/>
+  <owl:Class rdf:about="http://psink.de/dbpedia/Position"/>
+
+  <owl:Class rdf:about="http://psink.de/dbpedia/SoccerPlayer">
+	  <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://psink.de/dbpedia/hasBirthYear"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+ 	<rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://psink.de/dbpedia/hasTeam"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://psink.de/dbpedia/Team"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+ 	<rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://psink.de/dbpedia/hasBirthPlace"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://psink.de/dbpedia/BirthPlace"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+	<rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://psink.de/dbpedia/hasPosition"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://psink.de/dbpedia/Position"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+
+</owl:Class>
+
+	<owl:Class rdf:about="http://psink.de/scio/SadokSassi"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/MobinRai"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/GeorgeHoweFootballer"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/GreigYoung"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/CLallawmzuala"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/RobPenders"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/RobbieHaw"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/TommyMccullochGoalkeeper"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/IvayloZafirov"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/AbladeKumah"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/JoeAshley"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/DzintarKlavan"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/RuneCarlsson"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/KyleBenedictus"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/ArthurNineham"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/DarrenHoldenFootballer"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/JohnsonAkuchie"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/SouravChakraborty"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/RayPennick"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/LeeMargerison"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/RaafatAttia"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/SudhakaranKumar"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/ImreKissFootballerBorn1957"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/ParkSunYong"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/ConstantHuysmans"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/MitchellJoseph"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/LiamGray"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/JaanusVeensalu"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/LenOliverFootballer"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/SophusHansen"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/KimJongMinFootballer"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/AndyDavisBritishVirginIslandsFootballer"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/FredWoodward"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/CraigBingham"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/ParwinderSingh"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/IvanToney"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/TimHofstede"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/ZhuCongFootballer"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/HerbieWilliams"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/ArchibaldBarton"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/MarcelinoVargas"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/FadelJilal"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/DowlynDaly"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/AdixiLenzivio"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/ChristianDean"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/AbdelfettahRhiati"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/SjorsVerdellen"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/KeithGriffithsFootballer"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/VinceKenny"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/ArthurSamson"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/LeeSangYi"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/JoePeacock"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/MiguelDavis"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/RobertoSosaUruguayanFootballer"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/MalcolmDevitt"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/BernardHallFootballer"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/WallyHazelden"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/AlfredDobson"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/FredBeardsley"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/JamesLamontFootballer"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/SerafimNeves"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/TarmoSaks"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/MohammedKaram"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/PapeLatyrNDiaye"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/MahboubJumaA"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/BradleyBeattie"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/GerardoRomero"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/WuWeiFootballer"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/BozhidarMitrev"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/NieTao"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/ArieDeWinter"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/LuisReyna"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/NickKuipersFootballerBorn1992"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/KnutHansson"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/MiguelMba"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/AltayKahraman"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/CiprianoSantos"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/VictorKros"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/CameronLancaster"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/RomanZobnin"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/CarlosContrerasFootballer"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/ErnestMilton"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/TonyEmery"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/DrissTrichard"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/DineshSinghFootballer"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/JenniferMolina"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/BillyExley"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/BilelIfa"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/MiguelVanDamme"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/BruceCrawfordFootballer"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/TeddyBrayshaw"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/PeterMooneyFootballer"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/MartinLepa"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/WilliGerdau"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/KeithHarvey"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/KennedyMudenda"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/MuayadAlHaddad"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/WaleedAlJasem"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/RalphODonnell"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/CarlosNvomo"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/MariaMitkou"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/LennyPereira"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/VahidHeydarieh"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/IanAtkinson"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/HugoLepe"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/JustinChavez"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/KimBongHwan"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/IvanDeyanov"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/JimmyPageFootballer"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/MatthewCoad"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/LalrinzualaKhiangte"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/PeterHillFootballer"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/PhilGriggs"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/LeonTol"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/PaulDennyFootballer"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/DanyMaury"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/AyronVerkindere"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/KurtElshot"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/EvertonSena"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/KeSeungWoon"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/JosephGryzik"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/RonThompsonFootballer"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/JonathanMilesFootballer"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/BobbyHassell"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/HanChangWha"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/JakobHaugaard"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/JordensPeters"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/LahcenOuadani"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/DemetrioNeyra"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/OliverGill"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/LeeChangMyung"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/NoelTurner"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/JuliusUbido"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/AugustyBartillard"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/FredPelly"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/DanielPappoe"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/LuisMiguelValle"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/SolomonMarch"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/StewartBright"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/JoshRowbotham"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/JoBackaert"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/ChrisPhilipps"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/RolyGregoire"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/HenryHealless"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/JeongGiDong"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/LucasDawson"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/MasoudZeraei"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/YussefAlSuwayed"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/NikolaParshanov"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/PaulGladon"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/GaelMargulies"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/GerLagendijk"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/ErnestoBrown"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/EddyAntoine"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/JohanSvantesson"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/AlariLell"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/DimitrisMachairas"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/SaadAlHouti"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/JimmyCuthbertson"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/ErichHasenkopf"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/RicardoTalu"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/DenisLindsayFootballer"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/SanjibanGhosh"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/AndyHalls"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/AndrewCantFootballer"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/SamiAlHashash"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/ByronLawrence"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/MichalisKaras"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/SurjayPariyar"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/StefanVelichkov"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/RowenMuscat"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/JulianAguirreAgudelo"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/ThandokuhleMkhonza"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/AbdelazizSouleimani"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/SjaakTroost"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/WilfriedLouis"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/AlessandroBianchiFootballerBorn1989"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/LeonelParris"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/RainVessenberg"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/DimitriosManos"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/HarryMcmenemy"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/AdityaPutraDewa"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/GianpieroCombi"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/DimitarKostov"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/FrancoAmoroso"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/BoboiSingh"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/MarioMedina"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/JackCallender"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/TonyWingate"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/FredBarronFootballer"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/WilliamBerryFootballer"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/TonnyBrochmann"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/NatWalton"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/CarlosMateusXimenes"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/JackDeakin"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/MohamedOulhaj"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/PeterAllenFootballer"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/AlfredoBrown"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/BillWhare"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/JakeCuenca"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/MathieuDeplagne"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/JohnBainesFootballer"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/EliseoBrown"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/OhYoonKyung"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/AndyMoule"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/RazaliSaad"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/BertFenwick"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/UgoOkoye"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/AntonyLecointe"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/WilliamGyves"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/JosephKamga"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/AlbertReadFootballer"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/HugoVillanueva"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/OfirMizrahi"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/RudyGetzinger"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/DesireMontgomeryButler"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/IoannisStefas"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/TihomirNaydenov"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/JamalAlQabendi"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/JimmyThorpe"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/ZhaoXuebin"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/RobertVanKerkhoven"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/DmytroYarchuk"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/ChrisMorrow"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/TysonCaiado"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/RossMcfarlaneFootballer"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/AntonioGreco"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/JamieJonesFootballer"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/MitchStockentree"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/HorstNemec"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/ArthurMorrisFootballer"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/DavidBueso"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/ShaunMawer"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/JoeLodge"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/FredEwer"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/BobbyMillsFootballer"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/DaveLamontFootballer"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/MikaelMandron"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/PascalDiTommaso"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/KurtSvensson"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/GyulaPrassler"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/EnisMaljici"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/ArthurBellamy"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/EmmanuelOgoli"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/QuiterioOlmedo"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/SalvadorVillalba"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/AndreasKittos"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/SilvioAppiani"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/DamianKeeley"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/ClaudePapi"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/AugustinFernandes"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/ArthurGardnerFootballer"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/PrasenjitGhosh"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/NormanChalk"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/SelwynWhalley"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/DelroyScott"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/BertieBowler"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/BiswajitBiswas"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/AnthonyWordsworth"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/AleksandrOlerski"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/AliCrawford"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/FredSpeller"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/SzilviaSzeitl"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/SamirSaid"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/NoelGeorge"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/JosefMajer"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/TobiasBadila"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/UrmasLiivamaa"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/YangQipeng"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/BenYagan"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/ModestoDenis"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/AdenCharmakeh"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/LuisCruzFootballer"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/YangSeungKook"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/GeorgeBray"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/ArthurTopham"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/AlfCarroll"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/ThomasDanks"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/JohannWindisch"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/FredFurniss"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/MohamadAtwi"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/OleChristofferHeierenHansen"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/LenStansbridge"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/HamyarNasserAlIsmaili"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/MilenIvanov"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/PelayoEribo"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/CharlesGeertsFootballer"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/NedBromley"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/EvansKangwa"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/BernardSmithFootballer"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/IvanIvanovFootballerBorn1942"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/AbhijitDas"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/BramVanPolen"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/BrimaSesay"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/LinoNessi"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/TommyGrahamEnglishFootballer"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/AndreaFerrariFootballer"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/RidhaElLouze"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/WayneSobers"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/ArvoKraam"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/ArneLinderholm"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/DanielBentley"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/RayWhiteFootballer"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/GregTempest"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/MohamedBenMouza"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/BrimaBangura"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/MartinVanLeeuwen"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/AllalBenKassou"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/AbdelhamidSadmi"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/LewisMilne"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/NawabZeeshan"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/UrbanoRivera"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/DeleAlli"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/MiguelSegura"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/HarryHaddon"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/LarbiElHadi"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/AbdulJabarHashimHanoon"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/BenOlney"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/LeeJongHo"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/MauriceWebster"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/ZeferinoMartins"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/MarkTorrance"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/DumitruStajila"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/TonyMillerFootballer"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/RenanDosSantos"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/AldoPoy"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/IsaacShai"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/SonnyStevens"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/HoracioSequeira"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/DanielMudau"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/GideonVWay"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/FilipeDeSouzaConceicao"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/HamoudAlShemmari"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/GillesDewaele"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/KennyBanks"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/PeterRoney"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/AbdullahAlDosari"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/SheldonGovier"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/RoddieMackenzie"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/HarryGoslin"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/TomWade"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/OliverWhateley"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/IbraAgbo"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/TommyMorren"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/LewisDunk"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/JanekKiisman"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/FikriElma"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/AlanBuck"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/AlbertEvers"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/SimonBurman"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/RomanNykytyuk"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/DavidMacgregor"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/HeinzVersteeg"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/TaariqFielies"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/SalahdineHmied"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/FranciscoAlcarazFootballer"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/HarryMooreFootballer"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/JustinManao"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/VidinApostolov"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/KlausDecker"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/RomellBrathwaite"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/GiuseppeKoschier"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/AcurcioCarrelo"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/CedricBadjeck"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/NormanHeath"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/ArthurStanton"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/ObiOnyeike"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/PiotrRobakowski"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/FanaiLalrempuia"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/LennardRemy"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/RudolfPichler"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/AlbertIremonger"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/PeterGideon"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/ErnestoBelis"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/AndreAnis"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/UrmasKaljend"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/DanielOliveiraCosta"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/SamirQotb"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/AlexGardnerFootballer"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/LeonardoFerrel"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/BrunoAppels"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/BernhardWessel"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/ReidarOlsen"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/KarlNickerl"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/SamHignett"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/DavidSvensson"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/ArthurCowell"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/BuenaventuraFerreira"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/IvarEriksson"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/LukeHyam"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/MitchHarding"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/JuanAlfonsoValle"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/DmytroZaderetskyi"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/ArthurHallworth"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/LesterLanglais"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/PhilThomasFootballer"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/VegardSkjerve"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/GrahamWhittle"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/HaJungWon"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/DarrenBastow"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/ChoiYungKeun"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/YorickAntheunis"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/FabienCool"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/JaimeHuerta"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/HussainAlRomaihi"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/AdamMarjan"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/HugoSeixas"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/NassirAlGhanim"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/JimBlacker"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/MahmoodAbdulla"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/BernardMiddleditch"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/AlexFreitas"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/PetarVelichkov"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/TomBrooksFootballer"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/EladioReyes"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/AbdelmajidLamriss"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/BobbyPark"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/SungNakWoon"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/RyanLloyd"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/LucVanHoyweghen"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/JimGallacher"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/IvanOKonnelBronin"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/RobertoLeopardi"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/BlasCristaldo"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/IliyaDimitrov"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/AlanDennis"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/CarlosLett"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/JulioMaceiras"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/JulyMahlangu"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/KarlErikGrahn"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/ArturDyson"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/ValeriyBoychenko"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/GaryRiddell"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/DavidLetham"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/JohnCoxFootballer"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/LiaoBochao"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/WilliamCarrFootballer"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/AllanDevanney"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/RobinGurung"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/GunnarOlssonFootballer"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/GaryHarveyFootballer"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/TomPerryFootballer"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/CharlieDeacon"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/DavidBuckFootballer"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/JaredSims"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/RedouaneDrici"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/JosephClemente"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/ArthurMulford"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/DavidSoames"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/JoeReader"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/HaroldKeenan"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/MomarBangoura"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/CornelChinSue"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/RichardWilliamsFootballer"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/JasemBahman"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/WalterBuchananFootballer"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/LudivineDiguelman"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/AdrianBirdFootballer"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/VetonBerisha"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/MarcelTisserand"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/CharlesVandenWouwer"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/CyrilHennion"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/ValentinGalev"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/AlanDunne"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/AllassaneSango"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/TomBurrowsFootballer"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/AlexGilbey"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/AbdullahMayouf"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/NikhilKadam"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/RobbinRuiter"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/MohamedKaciSaid"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/ShakeelAbbasi"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/ErikPersson"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/AshleyFernandes"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/PatrickModeste"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/OliverGustafsson"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/JohnGrahamForward"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/TrevorHarrisFootballer"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/EnzoCrivelli"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/BrianAbrey"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/BobbyTynan"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/LucasMichelMendes"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/AboubacarBangouraFootballer"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/PaulFlowersFootballer"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/SavaligaAfu"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://psink.de/scio/RyooChangKil"> 
+		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
+	</owl:Class>
+
+   <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+   
+   <owl:DatatypeProperty rdf:about="http://psink.de/dbpedia/hasBirthYear">
+      <rdfs:domain rdf:resource="http://psink.de/dbpedia/SoccerPlayer" />
+   </owl:DatatypeProperty>
+  
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties TODO: in owl reader merge opbject props somehow
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+
+ <owl:ObjectProperty rdf:about="http://psink.de/dbpedia/hasBirthPlace">
+      <rdfs:domain rdf:resource="http://psink.de/dbpedia/SoccerPlayer" />
+      <rdfs:range rdf:resource="http://psink.de/dbpedia/BirthPlace" />
+   </owl:ObjectProperty>
+
+     -->
+ <owl:ObjectProperty rdf:about="http://psink.de/dbpedia/hasTeam">
+      <rdfs:domain rdf:resource="http://psink.de/dbpedia/SoccerPlayer" />
+      <rdfs:range rdf:resource="http://psink.de/dbpedia/Team" />
+   </owl:ObjectProperty>
+
+ <owl:ObjectProperty rdf:about="http://psink.de/dbpedia/hasPosition">
+      <rdfs:domain rdf:resource="http://psink.de/dbpedia/SoccerPlayer" />
+      <rdfs:range rdf:resource="http://psink.de/dbpedia/Position" />
+   </owl:ObjectProperty>
+
+   <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // NamedIndividuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Turin"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Fulham"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Bradford"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/CostaRica"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Wales"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/England"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Tartu"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Paraguay"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Cambridge"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Northumberland"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Tianjin"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/PernisNetherlands"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/BathSomerset"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Skelmanthorpe"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Tiraspol"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Czechoslovakia"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Staffordshire"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/SalfordGreaterManchester"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Guangdong"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Argentina"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Lisbon"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Colchester"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Farnham"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/BurkinaFaso"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Zambia"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/California"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Jarrow"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Bahrain"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Mamelodi"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Hendon"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Egersund"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Chester"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Budapest"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Nijmegen"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Irkutsk"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Shropshire"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Milan"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Hove"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/London"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Crediton"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Leith"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/SouthKorea"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Wakefield"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Warrington"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Oklahoma"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/OklahomaCity"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Heide"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Basildon"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Ferryhill"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Hoorn"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Sweden"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Wylam"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Girvan"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Poland"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Goa"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/RosarioSantaFe"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Wigan"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Bulgaria"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Tunisia"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Kwaggafontein"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Meaux"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Urmston"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Bloxwich"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Torquay"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Sikkim"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Grimsby"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/NewcastleUponTyne"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Frimley"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/SaudiArabia"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Sliema"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Birmingham"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/EdmontonLondon"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/StokeOnTrent"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Lebanon"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Douala"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Southampton"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Guernsey"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Israel"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/RioDeJaneiro"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Australia"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/SunderlandTyneAndWear"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Zeist"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/NorwayNationalFootballTeam"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Rutherglen"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Cameroon"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Lichfield"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Cyprus"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Wolverhampton"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/BasfordNottinghamshire"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Aryanah"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Glasgow"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Lagos"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/ManganIndia"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/TunisiaNationalFootballTeam"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Oman"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/StocktonOnTees"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/SouthAfrica"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/MarketDrayton"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Yugoslavia"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Blackpool"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Curitiba"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Bristol"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/NewcastleUnderLyme"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Brazil"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/EastTimor"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/AshtonInMakerfield"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Algeria"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Sileby"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Alexandria"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/SovietUnion"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Hoofddorp"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/TunstallStaffordshire"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Mealhada"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Liverpool"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Liaoning"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/SremskaMitrovica"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Inverness"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Holborn"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Silksworth"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Kolkata"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Moldova"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/CookIslands"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Padua"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/LuxembourgCity"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/NorthKorea"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/BritishVirginIslands"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Dagenham"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Spondon"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Sheffield"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Cowlairs"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Italy"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Honduras"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/PrestonLancashire"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Leicestershire"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Truro"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Haiti"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Singapore"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/MaltaNationalFootballTeam"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Sofia"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Altofts"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Scotland"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Darlington"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Chelmsford"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Russia"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Blackburn"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/CapeTown"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Rotterdam"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/PietRetiefMpumalanga"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Netherlands"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Almada"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/China"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Rouen"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/LondonBoroughOfCamden"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Malabo"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Nijkerk"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/SanJoseCalifornia"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Luanda"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/LincolnEngland"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Katowice"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Highgate"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/EllonAberdeenshire"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Romania"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Horsens"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Breda"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Enschede"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Dijon"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/BenoniGauteng"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/DjiboutiNationalFootballTeam"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/ArgentinaNationalFootballTeam"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Volendam"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Croydon"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Kamptee"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/KasamaZambia"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Ankara"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Wilford"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/RepublicOfIreland"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Bootle"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/NorthernIreland"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Indonesia"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Dominica"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Eastbourne"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Nottingham"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Tunis"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Angola"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/AshtonUnderLyne"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Casablanca"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/CudworthSouthYorkshire"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Portugal"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Salzwedel"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Grenada"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Greece"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Morocco"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Dalian"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Iran"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Grenoble"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/SierraLeone"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Antwerp"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/EquatorialGuinea"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Haarlem"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/UlcebyNorthLincolnshire"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Iraq"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Chile"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Rennebu"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/StokeUponTrent"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Moseley"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/EnglandNationalFootballTeam"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/WestHam"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Islington"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Neath"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Leeds"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Ukraine"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Wejherowo"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Ghana"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/RamatHasharon"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/India"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Montpellier"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/MiltonKeynes"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Turkey"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Belgium"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Coatbridge"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Kirkby"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Tegelen"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Manipur"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Sherborne"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Jamaica"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Peru"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/BuenosAires"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/CoronelOviedo"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Germany"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/PyrgosElis"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Chesterfield"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Hornsey"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Greenock"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Guinea"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Wallsend"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/PortoVecchio"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/WestonSuperMare"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Measham"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/WestBromwich"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Amsterdam"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Clydebank"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/IrvineNorthAyrshire"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Consett"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Trikala"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Kuwait"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Nigeria"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Maharashtra"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Zaandam"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/LIsleAdamValDOise"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/WuchuanGuangdong"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Uruguay"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/ZambiaNationalFootballTeam"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Leiden"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Switzerland"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Stepney"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Otley"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Quetta"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Devon"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Azazga"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Estonia"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Northampton"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Krugersdorp"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/EastPaloAltoCalifornia"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Dublin"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/KirklandWashington"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/LuxembourgNationalFootballTeam"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/WillingtonCheshire"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Lunglei"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Austria"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Ipswich"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Accra"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Fredrikstad"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Belfast"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/KiryatMotzkin"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Kimberworth"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/CarlisleCumbria"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/FranceWomenSNationalFootballTeam"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Brussels"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Hungary"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Maastricht"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Paramaribo"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Dundee"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/SanMarino"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/AmericanSamoa"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Paralimni"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Upminster"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Ouakam"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/SaltoUruguay"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/HamsterleyConsett"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/MexicoCity"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Senegal"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/AnambraState"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Pelsall"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/EastGermany"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Teignmouth"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/BataEquatorialGuinea"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Kenema"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/EllesmereShropshire"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/BoulogneSurMer"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Portsmouth"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/WestBengal"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Swansea"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/York"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Egypt"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Bitterne"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Bolivia"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Oswaldtwistle"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Dupnitsa"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Malta"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Smethwick"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Clowne"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/PanamaNationalFootballTeam"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Recife"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Pakistan"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Mizoram"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Qatar"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Rabat"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Edinburgh"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/France"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Turnhout"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Mykolaiv"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Brighton"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Derby"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/MarlowBuckinghamshire"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/LaPaz"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Kolhapur"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Barbados"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Heanor"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Dakar"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Norway"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Ealing"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Denmark"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Manchester"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Mexico"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Suriname"><rdf:type rdf:resource="http://psink.de/dbpedia/BirthPlace"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/RomaniaNationalFootballTeam"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/DoverAthleticFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/ShrewsburyTownFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/QatarNationalUnder23FootballTeam"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/AikFotboll"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/EquatorialGuineaNationalFootballTeam"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Vitesse"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/ItalyNationalFootballTeam"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/FcVolendam"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/TeamSoccerooFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/SanMarinoNationalFootballTeam"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/NottinghamForestFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/FcDenBosch"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/DarlingtonFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/ArsenalFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/MillwallFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/KBeerschotVAC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/BulgariaNationalFootballTeam"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/BoltonWanderersFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/CorinthianFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/BoliviaNationalFootballTeam"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/PfcSpartakPleven"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/DunfermlineAthleticFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/BritishVirginIslandsNationalFootballTeam"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/AsfaYennenga"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/BuxtonFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/NorwichCityFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/SheffieldUnitedFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/FcAarau"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/CookIslandsNationalFootballTeam"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/TranmereRoversFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/HungaryWomenSNationalFootballTeam"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/CoritibaFootBallClub"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/AACEagles"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/AlgeriaNationalFootballTeam"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/FcDynamoMoscow"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/HungaryNationalFootballTeam"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/BangorCityFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/TamworthFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/AlumniAthleticClub"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/AtalantaBC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/OldForestersFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/RbcRoosendaal"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/ScotlandNationalFootballTeam"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/DempoSC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/ShillongLajongFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/IslandersFc"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/FcDordrecht"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/GuiseleyAFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/ACMonzaBrianza1912"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/EnuguRangers"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/TorquayUnitedFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/FcAkademiyaTolyatti"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/SportingClubeDeGoa"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/TechnoAryanFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/BoldklubbenFrem"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/ClaphamRoversFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/MasFez"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/IttihadFc"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/ChileNationalFootballTeam"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/CelticBoysClub"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/BarkingsideFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/EnosisNeonParalimniFc"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Sarpsborg08Ff"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/HuddersfieldTownFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/HarlandAndWolff"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/OwlertonFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/ManchesterUnitedFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/NigeriaNationalFootballTeam"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/IndonesiaNationalFootballTeam"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/NorthernIrelandNationalUnder21FootballTeam"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/WaBoufarik"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/JsKabylie"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/GatesheadFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Hamborn07"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/BurnleyFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/SouthKoreaNationalFootballTeam"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/MoroccoNationalFootballTeam"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/GrimsbyTownFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/FrickleyAthleticFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/LincolnCityFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/MaltaNationalFootballTeam"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/XerezCd"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/GraysAthleticFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/BelgiumNationalFootballTeam"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/PfcLevskiSofia"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/VancouverRoyals"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/AccraHeartsOfOakSc"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/GrenadaNationalFootballTeam"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/HaringeyBoroughFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/TimorLesteNationalFootballTeam"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/LeytonOrientFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/FkHaugesund"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/CostaRicaNationalFootballTeam"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/WillingtonAFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/MontroseFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/SfaxRailwaysSports"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/SunderlandAFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/UnitedStatesMenSNationalSoccerTeam"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/MiltonKeynesDonsFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/KuwaitSc"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/ArgentinaNationalFootballTeam"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/DjiboutiNationalFootballTeam"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/PortValeFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/DalianShideFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/CDMotagua"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/MontpellierHscLadies"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/IsHalmia"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/DanubioFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/FcPuumaTallinn"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/AsNancy"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/GefleIf"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/ThandaRoyalZuluFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/UsBoulogne"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/WisbechTownFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/ArisThessalonikiFCWomen"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/EastFifeFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/FulhamFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/FcAk"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/HaitiNationalFootballTeam"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/AsMonacoFc"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/SouthendUnitedFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/AFCBournemouth"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/StJohnstoneFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/SouthportFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/MaccabiTelAvivFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/EnglandNationalFootballTeam"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/HfcHaarlem"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/TulsaGoldenHurricaneMenSSoccer"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/SliemaWanderersFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/UnionDouala"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/JuanAurich"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/FcKharkiv"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/UnitedSC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/CFOsBelenenses"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/NasarawaUnitedFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/RangdajiedUnitedFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/DeportivoMongomo"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/WeymouthFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/GreenockMortonFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/GuangdongSunrayCaveFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/SouthamptonFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/DagenhamRedbridgeFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/ArbroathFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/DeportivoCoopsol"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/MvvMaastricht"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/FcVolynLutsk"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/SportingCristal"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/RosarioCentral"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/IpswichTownFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/FreemantleFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/RCharleroiSC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/PfcSlaviaSofia"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/PuneFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/TottenhamHotspurFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/ScBastia"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/SkKladno"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/IfkEskilstuna"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/FortLauderdaleStrikers"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/QadsiaSc"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/LiverpoolFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/SCBeiraMar"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/CowdenbeathFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/JomoCosmosFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/UruguayNationalFootballTeam"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/DundeeUnitedFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/FranceNationalFootballTeam"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/_1FcFemina"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/UslDunkerque"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/FcGroningen"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/OudHeverleeLeuven"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/BotafogoDeFutebolERegatas"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/AsDouanesDakar"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/SantaCruzFutebolClube"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/AkademiskBoldklub"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/AstonVillaFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/IsraelNationalUnder21FootballTeam"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/AlianzaLima"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/GooleAFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/KDiegemSport"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/FirstViennaFc"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/PyongyangCitySportsClub"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/EstoniaNationalFootballTeam"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/ScTelstar"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/PfcCskaSofia"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/WiganAthleticFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/LuxembourgNationalFootballTeam"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/_1FcMagdeburg"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/SwedenNationalFootballTeam"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/HednesfordTownFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/ZamalekSc"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/AmericanSamoaNationalAssociationFootballTeam"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/LebanonNationalFootballTeam"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/ChesterCityFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/FcTwente"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/PaokFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/PlymouthArgyleFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/NewportCountyAFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/IkSleipner"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/ClubUniversidadDeChile"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/SkBrann"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/PohangSteelers"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/VeteransBviFootball"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/AdDiliOeste"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/HarwichParkestonFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/MoorGreenFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/SaudiArabiaNationalFootballTeam"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/WolverhamptonWanderersFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/CharlestonBattery"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/KikwanchaPyongyang"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/CreditonUnitedAFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/CoventryCityFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/PfcLokomotivSofia"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/CalcioPadova"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/BlackpoolFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/SheffieldWednesdayFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/KhaitanSportingClub"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/BoNessUnitedFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/ClydeFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/AustriaNationalFootballTeam"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/AlArabiScQatar"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/DominicaNationalFootballTeam"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/AjAuxerre"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/WienerSportClub"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/BurtonTownFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/BlythFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/SeoulArmyClub"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/CameroonNationalFootballTeam"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Feyenoord"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/JeonnamDragons"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/ClubTijuana"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/LouthUnitedFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/ScTavriyaSimferopol"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/SouthChinaAa"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/QatarNationalFootballTeam"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/JuventusFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/VvvVenlo"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/VancouverWhitecapsFc"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/IfElfsborg"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/SalgaocarFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/PeruNationalFootballTeam"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/LivingstonFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/SouthernSamity"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/BirkirkaraFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/DerbyCountyFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/SandvikensIf"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/AlArabiScKuwait"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/AnkaraDemirspor"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/TheStrongest"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/UsOuakam"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/StokeCityFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/TauroFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/BathCityFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/SunHeiSc"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/ChurchillBrothersSC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/AnchorQueensParkRangersFc"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/NacBreda"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/KigwanchaSportsClub"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/GermanyNationalFootballTeam"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/HapoelIroniKiryatShmonaFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/DeportivoTolucaFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/FalkenbergsFf"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/FcGirondinsDeBordeaux"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/FcMetz"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/FleetwoodTownFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/BarbadosNationalFootballTeam"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/GreeceWomenSNationalFootballTeam"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/BlackburnRoversFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/BrightonHoveAlbionFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/DonBoscoFc"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/NkanaFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/ClubLibertad"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/FCEtar"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/BradfordParkAvenueAFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/HamiltonAcademicalFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/SouthKoreaNationalUnder17FootballTeam"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/CrookTownAFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/CentroDeFutebolZicoSociedadeEsportiva"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/RhylFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/ClydebankFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/ThackleyFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/RajaCasablanca"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/ChesterfieldFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/BayelsaUnitedFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/MamelodiSundownsFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/FcMidtjylland"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/WestBromwichAlbionFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/BristolRoversFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/MarlowFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/ArnettGardensFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/ArmthorpeWelfareFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/DenmarkNationalFootballTeam"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/NotreDameSc"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/ParefSouthridgeSchool"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/LandskronaBois"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/OceanBoysFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/PecZwolle"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/NorwayNationalFootballTeam"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/NorthamptonTownFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/TokushimaVortis"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/ClubNacional"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/KBocholterVV"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/TunisiaNationalFootballTeam"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/PaykanFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/MsvDuisburg"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/PersijaJakarta"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/CercleBruggeKSV"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/IndiaNationalUnder19FootballTeam"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/KuwaitNationalFootballTeam"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/AberdeenFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/MexicoWomenSNationalFootballTeam"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/YorkCityFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/KSintTruidenseVV"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/CrusadersFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/PfcKaliakraKavarna"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/BristolCityFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/AlQuwaAlJawiya"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/_1SimmeringerSc"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/IranNationalUnder20FootballTeam"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/BahrainNationalFootballTeam"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/PortsAuthorityFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/ParaguayNationalFootballTeam"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/QueenSParkFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/MontpellierHsc"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/OmanNationalFootballTeam"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/HeiderSv"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/PsmMakassar"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/EgersundsIk"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/ChelseaFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/GuizhouRenheFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/NorthKoreaNationalFootballTeam"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/WiganBoroughFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/SwanseaCityAFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/AcHorsens"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/StranraerFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/RDaringClubMolenbeek"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/RealGarcilaso"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/KazmaSportingClub"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/TianjinTedaFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/KorinthosFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/OngcFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/LutonTownFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/PortugalNationalFootballTeam"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/PofcBotevVratsa"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/WrexhamFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/WalesNationalFootballTeam"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/StockportCountyFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/HeartlandFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/CarlisleUnitedFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/PersiramRajaAmpat"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/BradfordCityAFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/UnitedSikkimFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/BorussiaDortmund"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/PullmanFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/WimbledonFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/AjaxCapeTownFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/CDTrofense"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/MansfieldTownFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/FcSheriffTiraspol"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/BostonUnitedFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/DundeeFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/RcLens"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/FcOss"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/ClubAfricain"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/HangzhouGreentownFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/TruroCityFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/BedminsterFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/BasingstokeTownFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/GloucesterCityAFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/RcKouba"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/GrenobleFoot38"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/HondurasNationalFootballTeam"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/EvertonFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/EnglandNationalUnder17FootballTeam"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/WillemIiFootballClub"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/MerthyrTownFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/AlSalmiyaSc"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/DalianAerbinFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/EastGermanyNationalFootballTeam"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/SierraLeoneNationalFootballTeam"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/ArkaGdynia"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/SingaporeNationalFootballTeam"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/FcGueugnon"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/BarnsleyFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/PuaikuraFc"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/DefensoresDeBelgrano"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/ColchesterUnitedFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/EgyptNationalFootballTeam"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/MumbaiTigersFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/PfcChernoMoreVarna"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/ChicagoSting"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/AugustFootballClub"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/ZambiaNationalFootballTeam"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/CircoloSportivoItaliano"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/GombakUnitedFc"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/PooleTownFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/ChelmsfordCityFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/FarRabat"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/FcDesnaChernihiv"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/ExeterCityFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/DeportivoSaprissa"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/TeignmouthFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/SherwoodForesters"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/AtlantaChiefs"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/HalifaxTownAFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/HartlepoolUnitedFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/PelsallVillaFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/JamaicaNationalFootballTeam"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/VagonulArad"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/NetherlandsNationalFootballTeam"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/PfcBotevPlovdiv"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/VeriaFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/SloughTownFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/MacclesfieldTownFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/OlympiqueDeMarseille"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/ConsettAFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/GuineaNationalFootballTeam"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/FranceWomenSNationalFootballTeam"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/QatarSc"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Gais"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/BraintreeTownFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/BirminghamCityFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/WydadCasablanca"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/ADBaucau"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/AlAnsarSc"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/MohunBaganAC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/PowerDynamosFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/IraqNationalFootballTeam"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/ClubLitoral"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/PacificLutheranUniversity"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/MexicoNationalFootballTeam"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/CzechoslovakiaNationalFootballTeam"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/VikingFk"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/FCPorto"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/SportingClubeDePortugal"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/SpartaRotterdam"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/FkAustriaWien"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/NottsCountyFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/PanamaNationalFootballTeam"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Pakistan"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/ToulouseFc"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/NewcastleUnitedFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/SogndalFotball"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/MumbaiFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/OgcNice"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/FcUtrecht"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/LevadiakosFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/ClubNacionalDeFootball"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/SouthAfricaNationalFootballTeam"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/ClubSocialYDeportivoFlandria"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/MiddlesbroughFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/FredrikstadFk"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/ShenzhenRubyFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/LDAlajuelense"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/VsiTampaBayFc"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/CasualsFC"><rdf:type rdf:resource="http://psink.de/dbpedia/Team"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/ForwardAssociationFootball"><rdf:type rdf:resource="http://psink.de/dbpedia/Position"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Midfielder"><rdf:type rdf:resource="http://psink.de/dbpedia/Position"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/FieldHockey"><rdf:type rdf:resource="http://psink.de/dbpedia/Position"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/GoalkeeperAssociationFootball"><rdf:type rdf:resource="http://psink.de/dbpedia/Position"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/InsideForward"><rdf:type rdf:resource="http://psink.de/dbpedia/Position"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/DefenderAssociationFootball"><rdf:type rdf:resource="http://psink.de/dbpedia/Position"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/WingHalf"><rdf:type rdf:resource="http://psink.de/dbpedia/Position"/></owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://psink.de/scio/Midfield"><rdf:type rdf:resource="http://psink.de/dbpedia/Position"/></owl:NamedIndividual>
+</rdf:RDF>
