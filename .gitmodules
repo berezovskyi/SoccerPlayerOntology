@@ -1,0 +1,3 @@
+[submodule "lib/OBIECore"]
+	path = lib/OBIECore
+	url = https://github.com/hterhors/OBIECore.git
