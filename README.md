@@ -4,6 +4,7 @@ Simple example ontology for the SoccerPlayerOBIE Project (Generated with OWL2Jav
 **NOTE** This project is still under heavy development!
 
 **Dependencies**
+
 Dependencies are part of git submodule and are cloned automatically. 
 
 You need the following dependent projects:
