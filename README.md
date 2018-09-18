@@ -4,9 +4,12 @@ Simple example ontology for the SoccerPlayerOBIE Project (Generated with OWL2Jav
 **NOTE** This project is still under heavy development!
 
 **Dependencies**
+Dependencies are part of git submodule and are cloned automatically. 
+
 You need the following dependent projects:
 
 1)  OBIECore https://github.com/hterhors/OBIECore
+
 
 **Related Projects, Implementations / Examples**
 1) OWL2JavaBin https://github.com/hterhors/OWL2JavaBin is a tool taht can be used to convert ontologies written in OWL into java binaries which are used in the OBIE-ML-Framework.
