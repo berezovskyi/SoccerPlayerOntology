@@ -3,7 +3,7 @@ Simple example ontology for the SoccerPlayerOBIE Project (Generated with OWL2Jav
 
 **NOTE** This project is still under heavy development!
 
-**Dependiecies**
+**Dependencies**
 You need the following dependent projects:
 
 1)  OBIECore https://github.com/hterhors/OBIECore
