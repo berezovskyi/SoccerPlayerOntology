@@ -13,8 +13,8 @@ You need the following dependent projects:
 
 
 **Related Projects, Implementations / Examples**
-1) OWL2JavaBin https://github.com/hterhors/OWL2JavaBin is a tool taht can be used to convert ontologies written in OWL into java binaries which are used in the OBIE-ML-Framework.
-3) SoccerPlayerOBIEProject https://github.com/hterhors/SoccerPlayerOBIEProject is a project that works with the generated SoccerPalyerOntology. It contains example source code for
+1) OWL2JavaBin https://github.com/hterhors/OWL2JavaBin is a tool that can be used to convert ontologies written in OWL into java binaries which are used in the OBIE-ML-Framework.
+3) SoccerPlayerOBIEProject https://github.com/hterhors/SoccerPlayerOBIEProject is a project that works with the generated SoccerPlayerOntology. It contains example source code for
   i) the information extraction task using the OBIE MachineLearningFramework (incl. template / feature generation), 
   ii) how to convert an OWL to java binaries. 
   It further, contains an examplary annotated data set that was automatically generated from Wikipedia/dbpedia data using the DBPediaDatasetExtraction project.
@@ -27,7 +27,7 @@ The ontology is used in the OBIEMachineLearningFramework for information extract
 
 **The java binaries in this project are automatically generated with the OWL2JavaBin and must not be modified!**
 
-This ontology describes a soccer player with 4 properties. Classes and properties are (semi-manually) derived from the dbpedia-ontology / dbpedia-infobox data and wikipedia-pagelink data. 
+This ontology describes a soccer player with 4 properties. Classes and properties are (semi-automatically) derived from the dbpedia-ontology / dbpedia-infobox data and wikipedia-pagelink data. 
 
 **###
 NOTE: The namespace is actually not existent and just serves as an example!
@@ -70,7 +70,7 @@ Each class that is generated comes with a corresponding interface:
 SoccerPlayer: https://github.com/hterhors/SoccerPlayerOntology/blob/master/src/de/uni/bielefeld/sc/hterhors/psink/obie/projects/soccerplayer/ontology/classes/SoccerPlayer.java
 
 Each class contains setter adder and getter for their properties as defined by the ontology.
-You can simple instantiate a *SoccerPlayer* and add properties e.g. the BirthYear "1940" to it with:
+You can simply instantiate a *SoccerPlayer* and add properties e.g. the BirthYear "1940" to it with:
 
 <code>
 new SoccerPlayer().setBirthYear(new BirthYear("1940"));
