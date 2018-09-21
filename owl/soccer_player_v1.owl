@@ -53,6 +53,42 @@
 
 </owl:Class>
 
+  <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+   
+   <owl:DatatypeProperty rdf:about="http://psink.de/dbpedia/hasBirthYear">
+      <rdfs:domain rdf:resource="http://psink.de/dbpedia/SoccerPlayer" />
+   </owl:DatatypeProperty>
+  
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+ <owl:ObjectProperty rdf:about="http://psink.de/dbpedia/hasBirthPlace">
+      <rdfs:domain rdf:resource="http://psink.de/dbpedia/SoccerPlayer" />
+      <rdfs:range rdf:resource="http://psink.de/dbpedia/BirthPlace" />
+   </owl:ObjectProperty>
+
+ <owl:ObjectProperty rdf:about="http://psink.de/dbpedia/hasTeam">
+      <rdfs:domain rdf:resource="http://psink.de/dbpedia/SoccerPlayer" />
+      <rdfs:range rdf:resource="http://psink.de/dbpedia/Team" />
+   </owl:ObjectProperty>
+
+ <owl:ObjectProperty rdf:about="http://psink.de/dbpedia/hasPosition">
+      <rdfs:domain rdf:resource="http://psink.de/dbpedia/SoccerPlayer" />
+      <rdfs:range rdf:resource="http://psink.de/dbpedia/Position" />
+   </owl:ObjectProperty>
+
+
 	<owl:Class rdf:about="http://psink.de/dbpedia/SadokSassi"> 
 		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
 	</owl:Class>
@@ -1511,41 +1547,6 @@
 	<owl:Class rdf:about="http://psink.de/dbpedia/RyooChangKil"> 
 		<rdfs:subClassOf rdf:resource="http://psink.de/dbpedia/SoccerPlayer"/>
 	</owl:Class>
-
-   <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Datatypes
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-   
-   <owl:DatatypeProperty rdf:about="http://psink.de/dbpedia/hasBirthYear">
-      <rdfs:domain rdf:resource="http://psink.de/dbpedia/SoccerPlayer" />
-   </owl:DatatypeProperty>
-  
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Object Properties TODO: in owl reader merge object props somehow
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
- <owl:ObjectProperty rdf:about="http://psink.de/dbpedia/hasBirthPlace">
-      <rdfs:domain rdf:resource="http://psink.de/dbpedia/SoccerPlayer" />
-      <rdfs:range rdf:resource="http://psink.de/dbpedia/BirthPlace" />
-   </owl:ObjectProperty>
-
- <owl:ObjectProperty rdf:about="http://psink.de/dbpedia/hasTeam">
-      <rdfs:domain rdf:resource="http://psink.de/dbpedia/SoccerPlayer" />
-      <rdfs:range rdf:resource="http://psink.de/dbpedia/Team" />
-   </owl:ObjectProperty>
-
- <owl:ObjectProperty rdf:about="http://psink.de/dbpedia/hasPosition">
-      <rdfs:domain rdf:resource="http://psink.de/dbpedia/SoccerPlayer" />
-      <rdfs:range rdf:resource="http://psink.de/dbpedia/Position" />
-   </owl:ObjectProperty>
 
    <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
